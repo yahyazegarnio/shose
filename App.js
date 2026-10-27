@@ -1,10 +1,14 @@
 
-import { View, Image, FlatList, StyleSheet } from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet } from 'react-native';
 import products from './src/data/products';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>
+        Ma boutique de chaussures
+      </Text>
+
       <FlatList
         key="two-columns"
         data={products}
@@ -29,6 +33,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: 35,
+  },
+  title: {
+    fontSize: 20,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginVertical: 15,
   },
   itemContainer: {
     width: '50%',
